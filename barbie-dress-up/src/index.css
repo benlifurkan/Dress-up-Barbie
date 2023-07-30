@@ -14,10 +14,79 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 10px;
+  user-select: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.dropdown {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 5px;
+  top: 250px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #e94196;
+}
+
+.other:hover .dropdown {
+  display: block;
+}
+.dr
+
+.li {
+  list-style: none;
+}
+
+.a {
+  color: #f4f5f8;
+  text-decoration: none;
 }
 a:hover {
   color: #535bf2;
