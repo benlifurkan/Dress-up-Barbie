@@ -33,6 +33,18 @@ input[type=checkbox] {
   user-select: none;
 }
 
+.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav-right {
+  float: right;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -40,16 +52,11 @@ input[type=checkbox] {
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
+  float: right;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .dropdown {
