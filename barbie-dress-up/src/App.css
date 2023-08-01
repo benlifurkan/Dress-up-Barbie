@@ -5,19 +5,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 3em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #c507efaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #270125aa);
-}
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
