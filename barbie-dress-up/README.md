@@ -34,7 +34,11 @@ Welcome to the Barbie Dress Up Game, a fun and interactive web application built
 
 6. **Dress Up Barbie**: Now that you're in the game, you can interact with the UI to choose different clothing items, hairstyles, accessories, and more! Simply click on the items you want to add or change, and they will be applied to Barbie instantly.
 
+
+
 7. **Have Fun**: Enjoy dressing up Barbie with various combinations and create your unique fashion styles!
+
+![Barbie](./Barbie.png)
 
 ## Features
 
