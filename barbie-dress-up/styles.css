@@ -1,0 +1,52 @@
+
+/*****************/
+/* Gloabl Styling */
+/****************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--tinos);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 100px; /* TIP: match nav height */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    transition: all 0.5s;
+}
+
+div.content-wrapper {
+    border: 6px soild red;
+    width: 100%;
+    max-width: 1960px;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always; /* mobile scrolling */
+}
+
+/**************************/
+/*====== Catalogue ======*/
+/******************8******/
+
+#catalogue {
+    width: 50%;
+    background: linear-gradient(180deg, rgba(238, 153, 191, 1) 90%,
+    rgba(210, 89, 149, 1) 98%);
+    position: relative;
+}
