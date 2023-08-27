@@ -38,7 +38,7 @@ Welcome to the Barbie Dress Up Game, a fun and interactive web application built
 
 7. **Have Fun**: Enjoy dressing up Barbie with various combinations and create your unique fashion styles!
 
-![Barbie](./Barbie.png)
+![Barbie](./BarbieDress.png)
 
 ## Features
 
