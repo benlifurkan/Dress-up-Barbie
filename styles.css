@@ -74,7 +74,7 @@ h2 {
   }
 
   button {
-    position: absolute;
+    position: fixed;
     text-align: center;
     outline: 0;
     color: #fff;
