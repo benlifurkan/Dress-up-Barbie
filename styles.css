@@ -1,67 +1,159 @@
-
-/*****************/
-/* General Styling */
-/****************/
-@import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito&display=swap");
-*{
+/* General */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: var(--tinos);
+  }  
+
+  .top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: pink;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
 }
 
-main {
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*Need this otherwise display will be checkbo */
+#menu-toggle {
+  display: none;
+}
+
+/*Button Icon */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+/*Check icon */
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 50;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #ffffff;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #f5f4f4;
+  }
+  main {
     display: flex;
     min-height: 100vh;
-}
-
-html{
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 100px; /* TIP: match nav height */
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body{
-    background: linear-gradient(180deg, rgba(238, 153, 191, 1) 90%,
-    rgba(210, 89, 149, 1) 98%);
-}
-h1 {
-    font-family: 'Bubblegum Sans', cursive;
-    letter-spacing: .1em;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    position: fixed;
-    left: 20px;
-    top: 30px;
-}
-
-h2 {
-    display: inline-block;
+  }
+  header {
+    background-color: #e0218a;
     text-align: center;
-    text-decoration: none;
-    outline: 0;
-    overflow: hidden;
+    padding: 2px;
+    font-size: 25px;
+    color: #ED5C9B;
+  }
+  nav {
+    float: left;
+    width: 30%;
+    height: 100px;
+    background: #e0218a;
+    padding: 20px;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  main {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: .1em;
+    font-size: 45px;
     color: #fff;
-    background: #f08080;
-    border-radius: 5px;
-    box-shadow: 0 0 0 5px #f08080, 0 2px 3px 5px rgba(0,0,0,0.5);
-    border: 2px dashed #fff;
+    margin-left: 10px;
+  }
+  
+  h2 {
+    font-family: 'Brush Script MT', cursive;
     letter-spacing: .1em;
     color: #fff;
     transition: ease-in-out .25s;
     cursor: pointer;
     display: inline-block;
-    position: fixed;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    background-color: rgb(102, 153, 204);
-    height: 26px;
   }
   
   h2 ~ div {
@@ -69,79 +161,197 @@ h2 {
   }
   
   h2:hover {
-    color: #003399;
+    color: black;
     transform: translateX(-10px);
   }
-
-  button {
-    position: fixed;
-    text-align: center;
-    outline: 0;
-    color: #fff;
-    background: #f08080;
-    border-radius: 8px;
-    box-shadow: 0 0 0 5px #f08080, 0 2px 3px 5px rgba(0,0,0,0.5);
-    border: 2px dashed #fff;
-    width: 100;
-    height: 50;
-    left: 20;
-    top: 400px;
-}
-
-div.content-wrapper {
-    border: 6px soild red;
-    width: 100%;
-    max-width: 1960px;
-}
-
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always; /* mobile scrolling */
-}
-
-/**************************/
-/*====== Catalogue ======*/
-/******************8******/
-
-#catalogue {
-    width: 50%;
-    background: #e0218a;
+  
+  /*Left block*/
+  #catalogue {
+      width: 50%;
+      background: #e0218a;
     position: relative;
-}
-
-#top_style {
-    margin: 20px 20px;
-    flex: left;
-}
-
-
-#dressupzone {
-    margin: 50px 40px;
-    z-index: 1;
-}
-
-.Hair {
-    top: 150;
-    left: 20;
   }
   
-.Top {
-    top: 200;
-    left: 20;
-}
-
-.Bottoms {
-    top: 250;
-    left: 20;
-}
+  #top_style, #bottom_style, #shoes_style, .btn_reset {
+    margin: 20px 20px;
+  }
   
-.Dress {
-    top: 300;
-    left: 20;
-}
-
-.Shoes {
-    top: 350;
-    left: 20;
-}
+  .btn_style {
+    width: 70px;
+    height: 70px;
+    background-size: 70px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+    background-color: white;
+  }
+  
+  button.btn_style {
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: none;
+    box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.19);
+  }
+  
+  .options {
+    display: flex;
+  }
+  
+  .btn_hair_1 {
+    background-image: url();
+  }
+  .btn_hair_2 {
+    background-image: url();
+  }
+  .btn_hair_3 {
+    background-image: url();
+  }
+  
+  .btn_uw_1 {
+    background-image: url();
+  }
+  .btn_uw_2 {
+    background-image: url();
+  }
+  .btn_uw_3 {
+    background-image: url();
+  }
+  
+  .btn_top_1 {
+    background-image: url();
+  }
+  .btn_top_2 {
+    background-image: url();
+  }
+  .btn_top_3 {
+    background-image: url();
+  }
+  
+  .btn_bottom_1 {
+    background-image: url();
+  }
+  .btn_bottom_2 {
+    background-image: url();
+  }
+  .btn_bottom_3 {
+    background-image: url();
+  }
+  
+  .btn_socks_1 {
+    background-image: url();
+  }
+  .btn_socks_2 {
+    background-image: url();
+  }
+  .btn_socks_3 {
+    background-image: url();
+  }
+  .btn_socks_4 {
+    background-image: url();
+  }
+  
+  .btn_shoes_1 {
+    background-image: url();
+  }
+  .btn_shoes_2 {
+    background-image: url();
+  }
+  .btn_shoes_3 {
+    background-image: url();
+  }
+  
+  .btn_costumes_1 {
+    background-image: url();
+  }
+  
+  .btn_reset {
+    background-color: white;
+    border: none;
+    border-radius: 60%;
+    color: #e0218a;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 20px;
+  }
+  
+  /*Right block*/
+  #dressing-box {
+      width: 50%;
+      height: 850px;
+      background: #F18DBC;
+  }
+  
+  /* hair selection */
+  #hair_selection {
+    background-image: url();
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 788px;
+    position: absolute;
+    z-index: 4;
+  }
+  
+  /* top */
+  #top_selection {
+      background-image: none;
+      background-position: center top;
+      background-repeat: no-repeat;
+      width: 395px;
+      height: 788px;
+      position: absolute;
+      z-index: 6;
+  }
+  
+  /* bottom */
+  #bottom_selection {
+    background-image: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 788px;
+    position: absolute;
+    z-index: 9;
+  }
+  
+  /* Socks */
+  #socks_selection {
+    background-image: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 788px;
+    position: absolute;
+    z-index: 7;
+  }
+  
+  /* Shoes */
+  #shoes_selection {
+    background-image: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 788px;
+    position: absolute;
+    z-index: 8;
+  }
+  
+  
+  #doll {
+    background: url("") top left transparent no-repeat;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 788px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  
+  
+  
+  
+  

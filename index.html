@@ -1,35 +1,77 @@
-
-<!-- index.html -->
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Barbie Dress up</title>
-    <link rel="shortcut icon" href="#" />
+<body> 
+  <style>
 
-    <script type="module" src="./src/index.js"></script>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main>
-      <div id="catalogue">
-        <h1>Barbies dressing room</h1>
+  </style>
+  <header>
+    <h1>Barbies dressing room</h1>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <section class="top-nav">
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+      </ul>
+  </section>
+<main id="game">
+  <!-- Catalogue -->
+  <div id="catalogue">
+    
+    <!-- Top -->
+    <div id="top_style">
+      <h2>Tops</h2>
+      <div id="tops_choices" class="options">
+        <button class="btn_style btn_uw_1" value="url()"></button>
+        <button class="btn_style btn_uw_2" value="url()"></button>
+        <button class="btn_style btn_uw_3" value="url()"></button>
       </div>
-
-      <div id="Hairstyles">
-        <h2 class="Hair">Hairstyles</h2>
-        <div id="hairChoices" class="options">
-          <button class="btn_hair"></button>
+    </div>
+      
+      <!-- Bottoms -->
+      <div id="bottom_style">
+        <h2>Bottoms</h2>
+        <div id="bottoms_choices" class="options">
+          <button class="btn_style btn_uw_1" value="url()"></button>
+          <button class="btn_style btn_uw_2" value="url()"></button>
+          <button class="btn_style btn_uw_3" value="url()"></button>
         </div>
       </div>
-      <h2 class="Top">Top</h2>
-      <h2 class="Bottoms">Bottoms</h2>
-      <h2 class="Dress">Dress</h2>
-      <h2 class="Shoes">Shoes</h2>
-      <button>Reset</button>
-  
-      <div id='dressupzone'>
-        <img id='dressupimg' src="Barbie2.png" alt="Barbie Body"></img>
+    
+    <!-- Shoes -->
+    <div id="shoes_style">
+      <h2>Shoes</h2>
+      <div id="shoes_choices" class="options">
+        <button class="btn_style btn_uw_1" value="url()"></button>
+        <button class="btn_style btn_uw_2" value="url()"></button>
+        <button class="btn_style btn_uw_3" value="url()"></button>
       </div>
-    </main>
-  </body>
+    </div>
+    
+    <!-- Reset -->
+    <div id="reset"> 
+      <button class="btn_reset">RESET</button>
+    </div>
+  </div>
+  
+  <!-- Dressing box -->
+  <div id="dressing-box">
+    <div id="galbox">
+      <div id="girl"></div>
+      <div id="costumes_selection"></div>
+      <div id="hair_selection"></div>
+      <div id="underwear_selection"></div>
+      <div id="top_selection"></div>
+      <div id="bottom_selection"></div>
+      <div id="socks_selection"></div>
+      <div id="shoes_selection"></div>
+    </div>
+  </div>
+</main>
+</body>
 </html>
+<style>
+  
+</style>
