@@ -3,108 +3,57 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
   }  
 
-  .top-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #00BAF0;
-  background: pink;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #FFF;
-  height: 50px;
-  padding: 1em;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-/*Need this otherwise display will be checkbo */
-#menu-toggle {
-  display: none;
-}
-
-/*Button Icon */
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-  display: block;
-  background-color: #fff;
-  position: absolute;
-  height: 4px;
-  width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
-}
-
-.menu-button::before {
-  content: '';
-  margin-top: -8px;
-}
-
-.menu-button::after {
-  content: '';
-  margin-top: 8px;
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-/*Check icon */
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
-}
-
-  .menu {
+  .dropbtn {
+    cursor: pointer;
+    border-radius: 60%;
+    background-color: white;
+    border: none;
+    border-radius: 60%;
+    color: #e0218a;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 20px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: pink;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    // display: none; 
     position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 50;
-    flex-direction: column;
-    width: 20%;
-    justify-content: center;
-    align-items: center;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
   }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  
+
+  .dropdown-content a {
+    color: #e0218a;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
   }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #ffffff;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #f5f4f4;
-  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
   main {
     display: flex;
     min-height: 100vh;
@@ -284,17 +233,6 @@
       background: #F18DBC;
   }
   
-  /* hair selection */
-  #hair_selection {
-    background-image: url();
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 395px;
-    height: 788px;
-    position: absolute;
-    z-index: 4;
-  }
-  
   /* top */
   #top_selection {
       background-image: none;
@@ -316,18 +254,7 @@
     position: absolute;
     z-index: 9;
   }
-  
-  /* Socks */
-  #socks_selection {
-    background-image: none;
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 395px;
-    height: 788px;
-    position: absolute;
-    z-index: 7;
-  }
-  
+
   /* Shoes */
   #shoes_selection {
     background-image: none;
